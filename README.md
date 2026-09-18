@@ -7,7 +7,7 @@
 💬 Want to read this in **english** ? Go [**here**](README_ENG.md)
 
 <p align="center">
-    <img src ="https://img.shields.io/badge/version-4.3.0-blueviolet.svg"/>
+    <img src ="https://img.shields.io/badge/version-4.4.0-blueviolet.svg"/>
     <img src ="https://img.shields.io/badge/platform-windows|linux|macos-yellow.svg"/>
     <img src ="https://img.shields.io/badge/python-3.10|3.11|3.12|3.13-blue.svg" />
     <img src ="https://img.shields.io/github/actions/workflow/status/vnpy/vnpy/pythonapp.yml?branch=master"/>
@@ -18,12 +18,19 @@ VeighNa是一套基于Python的开源量化交易系统开发框架，在开源�
 
 在使用VeighNa进行二次开发（策略、模块等）的过程中有任何疑问，请查看[**VeighNa项目文档**](https://www.vnpy.com/docs/cn/index.html)，如果无法解决请前往[**官方社区论坛**](https://www.vnpy.com/forum/)的【提问求助】板块寻求帮助，也欢迎在【经验分享】板块分享你的使用心得！
 
-**想要获取更多关于VeighNa的资讯信息？** 请扫描下方二维码添加小助手加入【VeighNa社区交流微信群】：
+**想要更便捷地上手期货量化交易？** VeighNa Fusion现已在合作期货公司上线，带来一站式CTA量化交易与智能投研体验：
+
+* **开箱即用**：通过合作期货公司申请开通权限，无需自行完成繁琐的接入测试
+* **数据中心**：提供历史数据下载和管理能力，降低量化初学者的数据准备门槛
+* **智策投研**：根据策略描述辅助梳理逻辑、生成代码，并衔接历史回测与参数优化流程
+
+阅读[产品介绍文章](https://mp.weixin.qq.com/s/VknqBMnR3tUpWoKuTA8V4A)或查看[VeighNa Fusion文档](https://www.vnpy.com/docs/cn/fusion/index.html)。
+
+如需咨询开通，请扫描下方二维码添加【Fusion小助手】：
 
 <p align="center">
-  <img src ="https://vnpy.oss-cn-shanghai.aliyuncs.com/github_wx.png"/, width=250>
+  <img src="https://vnpy.oss-cn-shanghai.aliyuncs.com/Fusion%E5%B0%8F%E5%8A%A9%E6%89%8B.png" width="250" alt="Fusion小助手">
 </p>
-
 
 ## AI-Powered
 
@@ -38,6 +45,7 @@ VeighNa发布十周年之际正式推出4.0版本，重磅新增面向AI量化�
 
     * 专为ML算法训练优化设计，支持高效批量特征计算与处理
     * 内置丰富的因子特征表达式计算引擎，实现快速一键生成训练数据
+    * 支持自定义表达式函数注册，并提供缺失值填充、无穷值替换、时序标准化、特征删除等常用数据处理函数
     * [Alpha 158](./vnpy/alpha/dataset/datasets/alpha_158.py)：源于微软Qlib项目的股票市场特征集合，涵盖K线形态、价格趋势、时序波动等多维度量化因子
 
 * :bulb: **[model](./vnpy/alpha/model)**：预测模型训练
@@ -87,8 +95,6 @@ vnpy.alpha模块的设计理念受到[Qlib](https://github.com/microsoft/qlib)�
         * :arrow_up: CTP证券（[sopt](https://www.github.com/vnpy/vnpy_sopt)）：ETF期权
 
         * :arrow_up: 飞马（[femas](https://www.github.com/vnpy/vnpy_femas)）：国内期货
-
-        * :arrow_up: 恒生UFT（[uft](https://www.github.com/vnpy/vnpy_uft)）：国内期货、ETF期权
 
         * :arrow_up: 易盛（[esunny](https://www.github.com/vnpy/vnpy_esunny)）：国内期货、黄金TD
 
@@ -188,6 +194,8 @@ vnpy.alpha模块的设计理念受到[Qlib](https://github.com/microsoft/qlib)�
 
     * NoSQL类
 
+        * :arrow_up: QuestDB（[questdb](https://www.github.com/vnpy/vnpy_questdb)）：开源高性能列式时序数据库，兼容PostgreSQL协议和SQL查询，擅长高吞吐写入与低延时分析场景
+
         * DolphinDB（[dolphindb](https://www.github.com/vnpy/vnpy_dolphindb)）：一款高性能分布式时序数据库，适用于对速度要求极高的低延时或实时性任务
 
         * :arrow_up: TDengine（[taos](https://www.github.com/vnpy/vnpy_taos)）：分布式、高性能、支持SQL的时序数据库，带有内建的缓存、流式计算、数据订阅等系统功能，能大幅减少研发和运维的复杂度
@@ -226,7 +234,7 @@ vnpy.alpha模块的设计理念受到[Qlib](https://github.com/microsoft/qlib)�
 
 ## 环境准备
 
-* 推荐使用VeighNa团队为量化交易专门打造的Python发行版[VeighNa Studio-4.3.0](https://download.vnpy.com/veighna_studio-4.3.0.exe)，集成内置了VeighNa框架以及VeighNa Station量化管理平台，无需手动安装
+* 推荐使用VeighNa团队为量化交易专门打造的Python发行版[VeighNa Studio-4.4.0](https://download.vnpy.com/veighna_studio-4.4.0.exe)，集成内置了VeighNa框架以及VeighNa Station量化管理平台，无需手动安装
 * 支持的系统版本：Windows 11以上 / Windows Server 2022以上 / Ubuntu 22.04 LTS以上
 * 支持的Python版本：Python 3.10以上（64位），**推荐使用Python 3.13**
 
@@ -335,6 +343,12 @@ VeighNa使用Github托管其源代码，如果希望贡献代码请使用github�
 * [社区行为准则](https://github.com/vnpy/vnpy/blob/dev/.github/CODE_OF_CONDUCT.md)
 * [Issue模板](https://github.com/vnpy/vnpy/blob/dev/.github/ISSUE_TEMPLATE.md)
 * [PR模板](https://github.com/vnpy/vnpy/blob/dev/.github/PULL_REQUEST_TEMPLATE.md)
+
+**想要获取更多关于VeighNa开源社区的资讯？** 请扫描下方二维码添加小助手加入【VeighNa社区交流微信群】：
+
+<p align="center">
+  <img src="https://vnpy.oss-cn-shanghai.aliyuncs.com/github_wx.png" width="250" alt="VeighNa社区交流微信群">
+</p>
 
 ## 版权说明
 
